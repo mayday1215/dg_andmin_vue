@@ -48,3 +48,45 @@ export const reqSetRolesRights =(roleId,rids) => request({url:`roles/${roleId}/r
 
 //分配权限
 export const reqUserRole = (id,rid) => request({url:`users/${id}/role`,method:'put',data:{rid}})
+
+//获取商品分类列表type,pagenum,pagesize
+export const reqCategories =({type,pagenum,pagesize}) =>request({url:'categories',method:'get',params:{type,pagenum,pagesize}})
+
+
+//添加分类
+export const reqAddCategorie =(categorInfo) => request({url:'categories',method:'post',data:categorInfo})
+
+//删除分类
+export const reqDelCategorie =(id) => request({url:`categories/${id}`,method:'delete'})
+
+//编辑分类
+export const reqEditCategorie = (id,cat_name) => request({url:`categories/${id}`,method:'put',data:{cat_name}})
+
+//获取动态参数或者静态属性
+export const reqCategoriesAttr = (id,sel) => request({url:`categories/${id}/attributes`,method:'get',params:{sel}})
+
+//添加动态参数或者静态属性 categories/:id/attributes
+export const reqAddCatAttr =(id,attr_name,attr_sel) => request({url:`categories/${id}/attributes`,method:'post',data:{attr_name,attr_sel}})
+
+//修改动态参数或者静态属性
+export const reqUpdateCatAttr =(id,attrId,attr_name,attr_sel) => request({url:`categories/${id}/attributes/${attrId}`,method:'put',data:{attr_name,attr_sel}})
+
+//删除动态参数或者静态属性
+export const reqDelCatAttr = (id,attrId) => request({url:`categories/${id}/attributes/${attrId}`,method:'delete',})
+
+//删除子参数
+// categories/6/attributes/3077
+// attr_name: "版式"
+// attr_sel: "many"
+// attr_vals: "49吋4K超薄曲面 人工智能,55吋4K观影曲面 30核HDR,55吋4K超薄曲面 人工智能,65吋4K超薄曲面"
+export const reqDelCarAttrItem = ({id,attrId,attr_name,attr_sel,attr_vals}) => request({url:`categories/${id}/attributes/${attrId}`,method:'put',data:{attr_name,attr_sel,attr_vals}})
+
+
+//获取商品列表
+export const reqGoodsList = (goodsParams) => request({url:'goods',method:"get",params:goodsParams})
+
+//删除商品
+export const reqDelGoods = (id) => request({url:`goods/${id}`,method:'delete'})
+
+//添加商品
+export const reqAddGoods = (data) => request({url:'goods',method:'post',data})

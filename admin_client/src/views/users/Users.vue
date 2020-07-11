@@ -54,7 +54,7 @@
         </el-card>
 
 <!--        UserDialog-->
-        <user-dialog ref="dialog" @updateUsers="updateUsers" :rowUserInfo="rowUserInfo"></user-dialog>
+        <user-dialog ref="dialog" @updateUsers="updateUsers" @updateRowUserInfo="updateRowUserInfo" :rowUserInfo="rowUserInfo"></user-dialog>
 
 <!--      分配角色  -->
         <user-update-roles-dialog ref="updateRoles" @updateUsers="updateUsers" :updateUserInfo="updateUserInfo"></user-update-roles-dialog>
@@ -86,6 +86,10 @@
       this.getUserList()
     },
     methods: {
+      //更新用户状态
+      updateRowUserInfo(){
+        this.rowUserInfo = {}
+      },
       //点击分配角色
       updateRoles(userInfo){
         this.updateUserInfo = userInfo

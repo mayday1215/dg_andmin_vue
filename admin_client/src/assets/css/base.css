@@ -87,4 +87,9 @@ th:not([align]) {
 }
 .el-table {
     margin-top: 15px;
+    font-size: 13px !important;
+}
+
+.ql-editor{
+    height: 300px !important;
 }

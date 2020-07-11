@@ -99,6 +99,7 @@
       closeClick(){
         this.visible = false
         this.$refs.addForm.resetFields()
+        this.$emit("updateRowUserInfo")
       },
 
       //点击确定
@@ -145,6 +146,7 @@
       handleClose() {
         this.visible = false
         this.$refs.addForm.resetFields()
+        this.$emit("updateRowUserInfo")
       },
 
     },

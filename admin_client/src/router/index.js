@@ -20,9 +20,10 @@ const Params = () => import("views/params/Params")
 const Categories = () => import("views/categories/Categories")
 const Orders = () => import("views/orders/Orders")
 const Reports = () => import("views/reports/Reports")
+const GoodsAdd = () => import("views/goodsAdd/GoodsAdd")
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   routes: [
     {path: "/home",
       component: Home,
@@ -32,6 +33,7 @@ const router = new VueRouter({
         {path:'/roles',component:Roles,name:'Roles'},
         {path:'/rights',component:Rights,name:'Rights'},
         {path:'/goods',component:Goods,name:'Goods'},
+        {path:'/goods/add',component:GoodsAdd,name:'GoodsAdd'},
         {path:'/params',component:Params,name:'Params'},
         {path:'/categories',component:Categories,name:'Categories'},
         {path:'/orders',component:Orders,name:'Orders'},
