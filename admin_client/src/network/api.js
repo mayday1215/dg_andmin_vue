@@ -90,3 +90,9 @@ export const reqDelGoods = (id) => request({url:`goods/${id}`,method:'delete'})
 
 //添加商品
 export const reqAddGoods = (data) => request({url:'goods',method:'post',data})
+
+//订单列表
+export const reqOrders = (params) => request({url:'orders',method:'get',params})
+
+//获取数据统计reports/type/1
+export const reqReports = () => request({url:'reports/type/1',method:'get'})

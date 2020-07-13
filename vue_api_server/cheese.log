@@ -780,3 +780,11 @@
 [2020-07-11T17:10:20.904] [DEBUG] cheese - null
 [2020-07-11T17:18:44.300] [DEBUG] cheese - null
 [2020-07-11T17:22:20.105] [DEBUG] cheese - null
+[2020-07-13T09:15:38.687] [DEBUG] cheese - login => username:admin,password:123456
+[2020-07-13T09:15:38.689] [DEBUG] cheese - admin
+[2020-07-13T09:15:38.701] [DEBUG] cheese - null
+[2020-07-13T09:15:38.701] [DEBUG] cheese - null
+[2020-07-13T09:15:55.464] [DEBUG] cheese - login => username:admin,password:123456
+[2020-07-13T09:15:55.465] [DEBUG] cheese - admin
+[2020-07-13T09:15:55.468] [DEBUG] cheese - null
+[2020-07-13T09:15:55.468] [DEBUG] cheese - null
